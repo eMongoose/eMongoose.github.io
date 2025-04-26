@@ -1,0 +1,69 @@
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.left img {
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    padding: 10px 30px;
+    border: 5px solid black;
+    border-radius: 500px;
+}
+
+.right {
+    width: 50%;
+    padding: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.right h1 {
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.right article {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right ul {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-img {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact-img img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.contact-img img:active {
+    filter: brightness(.25);
+}
