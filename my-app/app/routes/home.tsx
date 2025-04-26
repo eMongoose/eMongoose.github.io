@@ -3,7 +3,7 @@ import { Welcome } from "../aboutme/aboutme";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
+    { title: "eMongoose's GitHub Pages" },
     { name: "description", content: "Welcome to React Router!" },
   ];
 }
