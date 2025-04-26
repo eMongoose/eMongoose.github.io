@@ -2,7 +2,7 @@
   "name": "my-app",
   "private": true,
   "type": "module",
-  "homepage": "https://eMongoose.github.io",
+  "homepage": "https://eMongoose.github.io/eMongoose.github.io",
 
   "scripts": {
     "build": "react-router build",
