@@ -6,7 +6,7 @@ import pfp from '../assets/pfp.jpg'
 import github_pfp from '../assets/github-mark.png'
 import linkedin_pfp from '../assets/LI-In-Bug.png'
 
-export function Welcome() {
+export function AboutMe() {
   const RedirectGitHub = () => {
     window.location.href = 'https://github.com/eMongoose';
   };
