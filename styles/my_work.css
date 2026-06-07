@@ -5,7 +5,7 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/***************************************************/
+/*********** Header Bar ***********/
 
 .header_bar_ul {
     list-style-type: none;
@@ -30,26 +30,26 @@ html {
     background-color: #111111;
 }
 
+/*********** Work Bar ***********/
 
-
-.my-work-buttons {
+.workbar_ul {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
 
-    gap: 10%;
-
-    
+    padding: 20px 10%;
+    list-style-type: none;
 }
 
-.my-work-buttons li {
-    display: block;
+.workbar_ul_li_a {
     color: rgb(255, 206, 46);
     border: 2px solid rgb(255, 206, 46);
     border-radius: 20px;
     padding: 10px 20px;
+    text-decoration: none;
 }
 
-
+/*********** Content ***********/
 
 .content-container {
     color: white;

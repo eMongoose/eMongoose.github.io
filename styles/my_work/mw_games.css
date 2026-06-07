@@ -1,0 +1,151 @@
+html {
+  padding: none;
+  margin: none;
+  background-color: #1c1825;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*********** Header Bar ***********/
+
+.header_bar_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.header_bar_ul_li {
+  float: left;
+}
+
+.header_bar_ul_li_a {
+  display: block;
+  color: rgb(255, 206, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.header_bar ul li a:hover {
+  background-color: #111111;
+}
+
+/*********** Work Bar ***********/
+
+.workbar_ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  padding: 20px 10%;
+  list-style-type: none;
+}
+
+.workbar_ul_li_a {
+  color: rgb(255, 206, 46);
+  border: 2px solid rgb(255, 206, 46);
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/*********** Content ***********/
+
+.content-container {
+  color: white;
+  padding: 10px 20%;
+  gap: 10px;
+}
+
+.img-casing {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  gap: 20px;
+}
+
+.img-casing_img {
+  width: 100%;
+}
+
+/** Spritesheet**/
+
+spritesheet_duck {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+spritesheet_duck_each {
+  text-align: center;
+
+}
+
+.duck_idle {
+  width: 128px;
+  height: 128px;
+  background-image: url("../../assets/ducksinarow/duck_idle.png");
+  animation: duck_idle 1s steps(2) infinite;
+}
+
+@keyframes duck_idle {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 256px 0;
+  }
+}
+
+.duck_walk {
+  width: 128px;
+  height: 128px;
+  background-image: url("../../assets/ducksinarow/duck_walk.png");
+  animation: duck_walk 1s steps(6) infinite;
+}
+
+@keyframes duck_walk {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 768px 0;
+  }
+}
+
+.duck_attack {
+  width: 128px;
+  height: 128px;
+  background-image: url("../../assets/ducksinarow/duck_attack.png");
+  animation: duck_attack 0.5s steps(4) infinite;
+}
+
+@keyframes duck_attack {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 512px 0;
+  }
+}
+
+.duck_hurt {
+  width: 128px;
+  height: 128px;
+  background-image: url("../../assets/ducksinarow/duck_hurt.png");
+  animation: duck_hurt 0.75s steps(3) infinite;
+}
+
+@keyframes duck_hurt {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 384px 0;
+  }
+}
