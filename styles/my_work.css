@@ -1,0 +1,83 @@
+html {
+    padding: none;
+    margin: none;
+    background-color: #1c1825;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*********** Header Bar ***********/
+
+.header_bar_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header_bar_ul_li {
+    float: left;
+}
+
+.header_bar_ul_li_a {
+    display: block;
+    color: rgb(255, 206, 46);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header_bar ul li a:hover {
+    background-color: #111111;
+}
+
+/*********** Work Bar ***********/
+
+.workbar_ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding: 20px 10%;
+    list-style-type: none;
+}
+
+.workbar_ul_li_a {
+    color: rgb(255, 206, 46);
+    border: 2px solid rgb(255, 206, 46);
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/*********** Content ***********/
+
+.content-container {
+    color: white;
+    padding: 10px 30%;
+    gap: 10px;
+}
+
+.img-casing {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    gap: 10px;
+}
+
+.img-casing_img {
+    width: 100%;
+}
+
+
+
+
+
+wip {
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: white;
+}

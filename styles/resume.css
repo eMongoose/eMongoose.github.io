@@ -1,0 +1,118 @@
+html {
+    padding: 0;
+    margin: 0;
+    background-color: #1c1825;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+   overflow: hidden;
+}
+
+/***************************************************/
+
+.header_bar_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+
+.header_bar_ul_li {
+    float: left;
+}
+
+.header_bar_ul_li_a {
+    display: block;
+    color: rgb(255, 206, 46);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header_bar ul li a:hover {
+    background-color: #111111;
+}
+
+/* Mini-Me */
+
+.mini-me {
+    display: grid;
+    place-items: center;
+}
+
+.mini-me_img {
+    height: 650px;
+    margin: auto;
+}
+
+
+/* Left Eye */
+.left-eye {
+    width: 47px;
+    height: 47px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+
+    position: relative;
+    top: 208px;
+    left: -62px;    
+    overflow: hidden;
+}
+
+/* Right Eye */
+.right-eye {
+    width: 47px;
+    height: 47px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+
+    position: relative;
+    top: 143px;
+    left: 17px;
+    overflow: hidden;
+
+}
+
+.left-eye-pupil,
+.right-eye-pupil {
+    background-color: black;
+    position: relative;
+
+    left: 6px;
+    top: 6px;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.table-legs {
+    width: 20px;
+    height: 200px;
+    background-color: #A25C43;
+    border: 2px solid#774634;
+}
+
+
+
+.resume {
+    position: absolute;
+    color: black;
+    top: 500px;
+    left: 800px;
+
+    padding: 0px 75px;
+
+    border: 1px solid gainsboro;
+    background-color: lightgray;
+    text-decoration: none;
+
+
+
+}
