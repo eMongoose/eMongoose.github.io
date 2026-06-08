@@ -32,3 +32,21 @@ html {
 .header_bar ul li a:hover {
     background-color: #111111;
 }
+
+
+.meep {
+  width: 64px;
+  height: 64px;
+  background-image: url("../assets/meep_sheet.png");
+  animation: meep 5s steps(26) infinite;
+}
+
+@keyframes meep {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 1664px 0;
+  }
+}
