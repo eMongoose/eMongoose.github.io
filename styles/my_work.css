@@ -68,3 +68,16 @@ html {
 .img-casing_img {
     width: 100%;
 }
+
+
+
+
+
+wip {
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
