@@ -27,8 +27,8 @@ window.PROJECTS = [
     type: "hackathon",
     categories: ["data"],
     description:
-      "Week-long business case pitching a $10M short-term rental investment in BC. Cleaned and merged 6+ datasets, used a MILP model to choose the best neighbourhoods and rental types, and showed that a loss in year one turns profitable over 10 years. Presented technical and non-technical pitches to a judging panel.",
-    tech: ["Power BI", "MILP Optimization", "Data Cleaning"],
+      "Week-long business case pitching a $10M short-term rental investment in BC. Cleaned and merged 6+ datasets, used a MILP model to choose the best neighbourhoods and rental types, and showed that a loss in year one turns profitable over 10 years. Presented a technical and non-technical presentation to a judging panel.",
+    tech: ["Power BI", "MILP", "Data Cleaning"],
     links: { github: "https://github.com/eMongoose/DSSS-DataJam-2026" },
   },
   {
@@ -40,7 +40,7 @@ window.PROJECTS = [
     description:
       "Full-stack fitness app for logging workouts and keeping friends accountable, with workout data stored for future analysis. Serverless backend on AWS Lambda, Amazon Aurora for storage, Amplify for deployment, and IAM for access management.",
     tech: ["AWS Lambda", "Amazon Aurora", "AWS Amplify", "AWS IAM"],
-    links: { github: "" },
+    links: { github: "" }, 
   },
   {
     title: "Toxins in Fish Data Analysis",
@@ -63,6 +63,16 @@ window.PROJECTS = [
     links: { github: "https://github.com/eMongoose/Red-Tide-Occurrence-Analysis" },
   },
   {
+    title: "Yelp Database Web Application",
+    date: "2026-04",
+    type: "personal",
+    categories: ["full-stack", "data"],
+    description:
+      "Flask web app on a SQL Server database of Yelp data, with login, business and user search, friendships, and reviews. Dynamic SQL handles filtering, sorting, review submission, friendship creation, and live updates to aggregate ratings.",
+    tech: ["Python", "Flask", "SQL", "SQL Server", "HTML", "CSS", "JavaScript"],
+    links: { github: "" }, 
+  },
+  {
     title: "Fine-Tuning Diffusion Model",
     date: "2026-04",
     dateLabel: "Mar – Apr 2026",
@@ -71,7 +81,7 @@ window.PROJECTS = [
     description:
       "Fine-tuned SDXL with LoRA weights to improve depth perception and perspective in generated images, with a Gradio interface for interactive inference and testing.",
     tech: ["PyTorch", "SDXL", "LoRA", "Gradio"],
-    links: { github: "" },
+    links: { github: "" }, 
   },
   {
     title: "Brain Tumor Segmentation U-Net",
@@ -82,7 +92,7 @@ window.PROJECTS = [
     description:
       "U-Net brain tumor segmentation model in PyTorch, paired with a Tkinter GUI so users can visualize the model's predictions.",
     tech: ["PyTorch", "U-Net", "Tkinter"],
-    links: { github: "" },
+    links: { github: "" }, 
   },
   {
     title: "Emergency Room Wait Time Prediction",
@@ -94,7 +104,7 @@ window.PROJECTS = [
     description:
       "Preprocessed real-world hospital data and engineered features to train and tune a LightGBM model that forecasts emergency department wait times.",
     tech: ["Python", "pandas", "scikit-learn", "LightGBM"],
-    links: { github: "" },
+    links: { github: "" }, 
   },
   {
     title: "Ducks in a Row",

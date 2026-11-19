@@ -19,12 +19,12 @@ window.SKILLS = [
     title: "Data & Machine Learning",
     skills: [
       "pandas", "scikit-learn", "SciPy", "statsmodels", "PyTorch", "LightGBM",
-      "Diffusion Models (SDXL, LoRA)", "Power BI", "Excel", "MILP", "PerplexityAI API",
+      "Diffusion Models (SDXL, LoRA)", "Power BI", "Excel", "MILP Optimization", "PerplexityAI API",
     ],
   },
   {
     title: "Cloud & Developer Tools",
-    skills: ["Git", "AWS Lambda", "AWS S3", "Amazon Aurora", "AWS Amplify", "AWS IAM"],
+    skills: ["Git", "SQL Server (SSMS)", "AWS Lambda", "AWS S3", "Amazon Aurora", "AWS Amplify", "AWS IAM"],
   },
   {
     title: "Design & Game Development",
