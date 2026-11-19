@@ -2,13 +2,13 @@
    Theme tokens
    ========================================================================== */
 :root {
-  --bg-gradient: linear-gradient(160deg, #ffffff 0%, #fff0f6 45%, #ffc8de 100%);
+  --bg: #ffffff;
   --text: #2a1d24;
   --muted: #6e5a65;
   --accent: #e0457b;
   --accent-strong: #c22f66;
   --accent-soft: rgba(224, 69, 123, 0.12);
-  --surface: rgba(255, 255, 255, 0.72);
+  --surface: #fdf5f8;
   --surface-solid: #ffffff;
   --border: rgba(194, 47, 102, 0.16);
   --shadow: 0 10px 30px -12px rgba(194, 47, 102, 0.28);
@@ -23,14 +23,14 @@
 }
 
 :root[data-theme="dark"] {
-  --bg-gradient: linear-gradient(160deg, #18181b 0%, #26232a 45%, #5c2443 100%);
+  --bg: #1f1f23;
   --text: #f6e9f0;
   --muted: #bfa9b6;
   --accent: #ff7aa8;
   --accent-strong: #ff9dbf;
   --accent-soft: rgba(255, 122, 168, 0.14);
-  --surface: rgba(40, 36, 44, 0.72);
-  --surface-solid: #26232a;
+  --surface: #2a2a2f;
+  --surface-solid: #303036;
   --border: rgba(255, 122, 168, 0.18);
   --shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
   --topbar-bg: rgba(24, 24, 27, 0.72);
@@ -56,21 +56,10 @@ body {
   font-size: 17px;
   line-height: 1.65;
   color: var(--text);
-  background: #fff0f6; /* fallback under the gradient layer */
+  background: var(--bg);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
-  transition: color 0.3s ease;
-}
-:root[data-theme="dark"] body { background: #1f1d22; }
-
-/* Fixed gradient layer (works on iOS, unlike background-attachment: fixed) */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: var(--bg-gradient);
-  transition: opacity 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 a { color: var(--accent-strong); }
@@ -181,6 +170,7 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5em; }
 .social-btn:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
 
 .theme-toggle {
+  margin-left: auto;
   width: 42px;
   height: 42px;
   border-radius: 12px;
@@ -293,18 +283,15 @@ main {
   font-size: clamp(2.6rem, 6vw, 4.2rem);
   font-weight: 800;
   letter-spacing: -0.02em;
-  background: linear-gradient(90deg, var(--text), var(--accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--text);
 }
 .lead { font-size: 1.2rem; color: var(--muted); font-weight: 500; }
 .about p { max-width: 62ch; }
 
 .avatar-wrap {
-  padding: 8px;
+  padding: 6px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), transparent 70%);
+  border: 3px solid var(--accent);
 }
 .avatar {
   width: 260px;
@@ -422,7 +409,7 @@ main {
    ========================================================================== */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   gap: 20px;
 }
 .project-card {
@@ -497,6 +484,53 @@ main {
   color: var(--muted);
   border: 2px dashed var(--border);
   border-radius: var(--radius);
+}
+
+/* ==========================================================================
+   Skills
+   ========================================================================== */
+#skills { min-height: auto; }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+.skill-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.skill-group h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-strong);
+  margin-bottom: 14px;
+}
+.skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skill-list li {
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface-solid);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+.skill-list li:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -606,10 +640,10 @@ main {
     text-decoration: none;
     color: var(--muted);
     font-weight: 600;
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     border-bottom: 3px solid transparent;
     white-space: nowrap;
-    padding: 0 8px;
+    padding: 0 6px;
   }
   .mobile-nav a.active {
     color: var(--accent-strong);

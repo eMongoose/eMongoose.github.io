@@ -122,7 +122,7 @@
         (p.image ? '<img class="project-img" src="' + esc(p.image) + '" alt="Screenshot of ' + esc(p.title) + '" loading="lazy" />' : "") +
         '<div class="project-body">' +
           '<div class="project-meta">' +
-            '<time datetime="' + esc(p.date) + '">' + esc(formatDate(p.date)) + "</time>" +
+            '<time datetime="' + esc(p.date) + '">' + esc(p.dateLabel || formatDate(p.date)) + "</time>" +
             (typeLabel ? '<span class="badge badge-' + esc(p.type) + '">' + esc(typeLabel) + "</span>" : "") +
             (p.award ? '<span class="badge badge-award">🏆 ' + esc(p.award) + "</span>" : "") +
           "</div>" +
@@ -146,8 +146,6 @@
     grid.innerHTML = list.length
       ? list.map(cardHTML).join("")
       : '<div class="empty-state">No projects match these filters yet. Try another combination.</div>';
-    countEl.textContent = "Showing " + list.length + " of " + projects.length +
-      " project" + (projects.length === 1 ? "" : "s") + ", newest first";
   }
  
   function onChipClick(e) {
@@ -165,6 +163,18 @@
  
   renderFilters();
   renderProjects();
+ 
+  /* ---------------------------- Skills ---------------------------- */
+  const skillsGrid = document.getElementById("skills-grid");
+  if (skillsGrid) {
+    skillsGrid.innerHTML = (window.SKILLS || []).map(function (group) {
+      return '<div class="skill-group">' +
+        "<h3>" + esc(group.title) + "</h3>" +
+        '<ul class="skill-list">' +
+          (group.skills || []).map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") +
+        "</ul></div>";
+    }).join("");
+  }
  
   /* ---------------------- Active section in nav ---------------------- */
   const navLinks = document.querySelectorAll("[data-section]");
@@ -205,7 +215,7 @@
   /* ---------------------------- Contact ---------------------------- */
   const form = document.getElementById("contact-form");
   const emailLink = document.querySelector(".contact-email");
-  form.addEventListener("submit", function (e) {
+  if (form) form.addEventListener("submit", function (e) {
     e.preventDefault();
     const to = emailLink ? emailLink.getAttribute("href").replace(/^mailto:/, "") : "";
     const data = new FormData(form);

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name · Portfolio</title>
-  <meta name="description" content="Personal website and project portfolio of Your Name." />
+  <title>Emily Huang · Portfolio</title>
+  <meta name="description" content="Personal website and project portfolio of Emily Huang." />
 
-  <!-- Apply saved / system theme before paint to avoid a flash -->
   <script>
     (function () {
       try {
         var saved = localStorage.getItem("theme");
         var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
         document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
-      } catch (e) {}
+      } catch (e) { }
     })();
   </script>
 
@@ -22,40 +22,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#about">Skip to content</a>
 
   <!-- ============ TOP BAR (sticky social buttons, mobile nav) ============ -->
   <header class="topbar">
-    <a href="#about" class="brand" aria-label="Back to top">YN</a>
 
     <!-- Mobile-only nav links (desktop uses the left sidebar) -->
     <nav class="mobile-nav" aria-label="Sections">
       <a href="#about" data-section="about">About</a>
       <a href="#projects" data-section="projects">Projects</a>
-      <a href="#resume" data-section="resume">Resume</a>
-      <a href="#contact" data-section="contact">Contact</a>
+      <a href="#skills" data-section="skills">Skills</a>
     </nav>
 
     <!-- Sticky, top-center social buttons -->
     <div class="social" role="group" aria-label="Social links">
-      <!-- TODO: replace with your LinkedIn URL -->
-      <a class="social-btn" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" aria-label="LinkedIn" data-tip="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      <a class="social-btn" href="https://www.linkedin.com/in/emongoose/" target="_blank" rel="noopener"
+        aria-label="LinkedIn" data-tip="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+        </svg>
       </a>
-      <!-- TODO: replace with your GitHub URL -->
-      <a class="social-btn" href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub" data-tip="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>
+      <a class="social-btn" href="https://github.com/eMongoose" target="_blank" rel="noopener" aria-label="GitHub"
+        data-tip="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3" />
+        </svg>
       </a>
-      <!-- TODO: replace with your email -->
-      <a class="social-btn" href="mailto:you@example.com" aria-label="Email" data-tip="Email">
-        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      <a class="social-btn" href="mailto:eha80@sfu.ca" aria-label="Email" data-tip="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m22 7-10 6L2 7" />
+        </svg>
       </a>
     </div>
 
     <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle light / dark">
-      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round">
+        <circle cx="12" cy="12" r="4" />
+        <path
+          d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
     </button>
   </header>
 
@@ -66,8 +82,7 @@
       <ol>
         <li><a href="#about" data-section="about"><span class="toc-num">01</span>About Me</a></li>
         <li><a href="#projects" data-section="projects"><span class="toc-num">02</span>Projects</a></li>
-        <li><a href="#resume" data-section="resume"><span class="toc-num">03</span>Resume</a></li>
-        <li><a href="#contact" data-section="contact"><span class="toc-num">04</span>Contact</a></li>
+        <li><a href="#skills" data-section="skills"><span class="toc-num">03</span>Skills</a></li>
       </ol>
     </nav>
   </aside>
@@ -77,33 +92,31 @@
     <section id="about" class="section about">
       <div class="about-grid">
         <div>
-          <p class="eyebrow">Hi there, I'm</p>
-          <h1>Your Name</h1>
-          <p class="lead">Software engineer · Data &amp; ML enthusiast · Lifelong builder</p>
+          <p class="eyebrow">I've been expecting you. Hello, I'm</p>
+          <h1>Emily Huang</h1>
+          <p class="lead">Student · Machine Learner · Data enthusiast · Curious George</p>
           <p>
-            <!-- TODO: write your introduction -->
-            I'm a student / developer who loves turning ideas into products. I work across the stack,
+            I'm a computing science student who loves turning ideas into products. I work across the stack,
             from designing clean interfaces to building cloud infrastructure and training machine learning
-            models. Right now I'm focused on <strong>something you care about</strong>.
+            models. Right now I'm focused on completing projects that matter to me and the world around me.
           </p>
           <p>
-            Outside of code, you'll find me doing a hobby, another hobby, or exploring a new city.
+            Outside of code, I'm eating, crocheting shrimp, or looking for data to collect.
           </p>
           <div class="about-actions">
-            <a class="btn btn-primary" href="#projects">See my projects</a>
-            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            <a class="btn btn-primary" href="#projects">See my work</a>
           </div>
         </div>
         <div class="avatar-wrap">
-          <!-- TODO: replace assets/profile.svg with your photo, e.g. assets/profile.jpg -->
-          <img class="avatar" src="assets/profile.svg" alt="Portrait of Your Name" width="260" height="260" />
+          <img class="avatar" src="125213031.jpg" alt="Portrait of Emily Huang" width="260" height="260" />
         </div>
       </div>
 
       <ul class="quick-facts">
-        <li><span>Based in</span>City, State</li>
-        <li><span>Studying</span>Your School / Degree</li>
-        <li><span>Currently</span>Open to opportunities</li>
+        <li><span>I'm Based in</span>Richmond, BC, Canada</li>
+        <li><span>Studying</span>Computing Sciences at SFU</li>
+        <li><span>Currently</span>Looking for a co-op position</li>
+        <li><span>Latest Interest</span>Oysters</li>
       </ul>
     </section>
 
@@ -126,50 +139,22 @@
       <div class="project-grid" id="project-grid"></div>
     </section>
 
-    <!-- ============ RESUME ============ -->
-    <section id="resume" class="section">
-      <h2 class="section-title"><span>03</span>Resume</h2>
-      <div class="resume-card">
-        <div>
-          <p>Want the full picture? View or download my resume below.</p>
-          <ul class="resume-highlights">
-            <!-- TODO: your highlights -->
-            <li><strong>Experience:</strong> Software Engineering Intern @ Company (Summer 2026)</li>
-            <li><strong>Education:</strong> B.S. Computer Science, University (2027)</li>
-            <li><strong>Skills:</strong> JavaScript, Python, React, SQL, AWS, PyTorch</li>
-          </ul>
-        </div>
-        <div class="resume-actions">
-          <!-- TODO: drop your resume at assets/resume.pdf -->
-          <a class="btn btn-primary" href="assets/resume.pdf" target="_blank" rel="noopener">View resume</a>
-          <a class="btn btn-ghost" href="assets/resume.pdf" download>Download PDF</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section id="contact" class="section">
-      <h2 class="section-title"><span>04</span>Contact</h2>
-      <div class="contact-card">
-        <p class="lead">I'm always happy to chat about new opportunities, collaborations, or ideas.</p>
-        <form class="contact-form" id="contact-form">
-          <label>Name<input type="text" name="name" required autocomplete="name" /></label>
-          <label>Subject<input type="text" name="subject" required /></label>
-          <label class="full">Message<textarea name="message" rows="5" required></textarea></label>
-          <button class="btn btn-primary" type="submit">Send email</button>
-        </form>
-        <p class="contact-note">The form opens your email app. Or reach me at
-          <a href="mailto:you@example.com" class="contact-email">you@example.com</a>.</p>
-      </div>
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <h2 class="section-title"><span>03</span>Skills</h2>
+      <!-- Filled in from skills.js -->
+      <div class="skills-grid" id="skills-grid"></div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Your Name · Built with HTML, CSS &amp; JS · Hosted on GitHub Pages</p>
+    <p>© <span id="year"></span> Emily Huang · Built with HTML, CSS &amp; JS · Hosted on GitHub Pages</p>
   </footer>
 
-  <!-- Project data first, then the app -->
+  <!-- Data first, then the app -->
   <script src="projects.js"></script>
+  <script src="skills.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
