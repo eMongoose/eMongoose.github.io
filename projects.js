@@ -139,7 +139,7 @@ window.PROJECTS = [
 /* Labels shown on the filter buttons and project tags.
    To add a new category, add it here AND use its key in a project above. */
 window.CATEGORIES = {
-  "web-design": "Web Design",
+//   "web-design": "Web Design",
   "full-stack": "Full Stack",
   cloud: "Cloud Computing",
   data: "Data Analysis / Engineering",
