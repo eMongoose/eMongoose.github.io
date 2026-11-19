@@ -29,6 +29,7 @@ window.PROJECTS = [
     description:
       "Week-long business case pitching a $10M short-term rental investment in BC. Cleaned and merged 6+ datasets, used a MILP model to choose the best neighbourhoods and rental types, and showed that a loss in year one turns profitable over 10 years. Presented technical and non-technical pitches to a judging panel.",
     tech: ["Power BI", "MILP Optimization", "Data Cleaning"],
+    links: { github: "https://github.com/eMongoose/DSSS-DataJam-2026" },
   },
   {
     title: "Fitness Journal Web Application",
@@ -39,6 +40,7 @@ window.PROJECTS = [
     description:
       "Full-stack fitness app for logging workouts and keeping friends accountable, with workout data stored for future analysis. Serverless backend on AWS Lambda, Amazon Aurora for storage, Amplify for deployment, and IAM for access management.",
     tech: ["AWS Lambda", "Amazon Aurora", "AWS Amplify", "AWS IAM"],
+    links: { github: "" },
   },
   {
     title: "Toxins in Fish Data Analysis",
@@ -48,38 +50,39 @@ window.PROJECTS = [
     description:
       "Integrated five toxin-monitoring datasets (190,000+ observations) from the Canadian Open Government Portal, cleaned and standardized them, and built five Power BI visuals revealing a consistent decline in median concentrations of four major toxins.",
     tech: ["Python", "pandas", "Power BI", "Excel"],
+    links: { github: "https://github.com/eMongoose/Analyzing-Toxins-in-Fish" },
   },
   {
     title: "Red Tide Environmental Data Analysis",
     date: "2026-08",
     type: "personal",
-    // event: "Computational Data Science (CMPT 353), SFU",
     categories: ["data", "ml"],
     description:
       "End-to-end pipeline matching environmental records geospatially (Haversine + BallTree), testing links to red tide occurrence with Mann–Whitney U tests and logistic regression, and evaluating classifiers under class imbalance.",
     tech: ["Python", "pandas", "scikit-learn", "SciPy", "statsmodels"],
+    links: { github: "https://github.com/eMongoose/Red-Tide-Occurrence-Analysis" },
   },
   {
     title: "Fine-Tuning Diffusion Model",
     date: "2026-04",
     dateLabel: "Mar – Apr 2026",
     type: "personal",
-    // event: "Deep Learning (CMPT 420), SFU",
     categories: ["ml"],
     description:
       "Fine-tuned SDXL with LoRA weights to improve depth perception and perspective in generated images, with a Gradio interface for interactive inference and testing.",
     tech: ["PyTorch", "SDXL", "LoRA", "Gradio"],
+    links: { github: "" },
   },
   {
     title: "Brain Tumor Segmentation U-Net",
     date: "2026-04",
     dateLabel: "Feb – Apr 2026",
     type: "personal",
-    // event: "Special Topics in AI (CMPT 419), SFU",
     categories: ["ml"],
     description:
       "U-Net brain tumor segmentation model in PyTorch, paired with a Tkinter GUI so users can visualize the model's predictions.",
     tech: ["PyTorch", "U-Net", "Tkinter"],
+    links: { github: "" },
   },
   {
     title: "Emergency Room Wait Time Prediction",
@@ -89,8 +92,9 @@ window.PROJECTS = [
     award: "First Prize",
     categories: ["ml", "data"],
     description:
-      "Preprocessed real-world hospital data and engineered features to train and tune a LightGBM, XGBoost, and CatBoost model that forecasts emergency department wait times. Delivered a mix of a non-technical and technical presentation.",
+      "Preprocessed real-world hospital data and engineered features to train and tune a LightGBM model that forecasts emergency department wait times.",
     tech: ["Python", "pandas", "scikit-learn", "LightGBM"],
+    links: { github: "" },
   },
   {
     title: "Ducks in a Row",
@@ -101,17 +105,18 @@ window.PROJECTS = [
     description:
       "Cooperative multiplayer 2D platformer built around teamwork mechanics, with custom pixel-art assets.",
     tech: ["Unity", "Piskel"],
+    links: { github: "https://github.com/eMongoose/Ducks-in-a-Row" },
   },
   {
     title: "Multiplayer Miniature Golf",
     date: "2025-08",
     dateLabel: "Jul – Aug 2025",
     type: "personal",
-    // event: "Data Communications & Networking (CMPT 371), SFU",
     categories: ["game-dev"],
     description:
       "Multiplayer mini golf with a client-server architecture over TCP sockets and JSON. The server runs physics, scoring, and goal detection and broadcasts real-time state to every client.",
     tech: ["Lua", "Love2D", "TCP Sockets", "JSON"],
+    links: { github: "https://github.com/camblsoup/MiniatureGolf" },
   },
   {
     title: "Sheep Tossing Minigame",
@@ -123,6 +128,7 @@ window.PROJECTS = [
     description:
       "Relaxing 3D game designed to help players fall asleep, with soothing visuals and custom 3D models, built as a team prototype in a weekend.",
     tech: ["Unity", "Blender"],
+    links: { github: "https://github.com/eMongoose/DreamHacks2025" },
   },
   {
     title: "Cover Letter Generator",
@@ -133,6 +139,7 @@ window.PROJECTS = [
     description:
       "Flask web tool that uses PerplexityAI to generate personalized cover letters from a job description and resume.",
     tech: ["Python", "Flask", "HTML/CSS", "PerplexityAI"],
+    links: { github: "https://github.com/camblsoup/JourneyHacks" },
   },
 ];
  
